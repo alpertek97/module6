@@ -51,9 +51,6 @@
 
         /*FIRST BREAK POINT === tablet */
         @media only screen and (max-width : 800px) {
-            body {
-                background: blue;
-            }
 
             .grid-container {
                 display: grid;
