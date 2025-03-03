@@ -85,6 +85,10 @@
             ul li {
                 display: inline-block;
             }
+		
+		video {
+				display: none;
+			}
 
         }
         
