@@ -1,0 +1,97 @@
+        img		{ 
+			max-width: 45%;
+			float: left; /* YOU CAN FLOAT AN ELEMENT WITHIN A GRID AREA */
+		}
+		
+		
+		header {
+            grid-area: header;
+            border: 1px solid black;
+            padding: 0.5em;
+            text-decoration: underline;
+        }
+
+        nav {
+            grid-area: nav;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        main {
+            grid-area: main;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        aside {
+            grid-area: aside;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header aside'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+                'nav nav main main main aside';
+            grid-gap: .5em;
+            padding: .5em;
+			
+			max-width: 70em; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+
+
+        ul li {
+            list-style-type: none;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 800px) {
+            body {
+                background: blue;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'header header header header header header'
+					'nav nav nav nav nav nav'
+                    'main main main main aside aside';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 550px) {
+
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside aside aside aside';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+			
+			img {
+				display: none; /* AND YOU CAN MAKE THINGS DISAPPEAR WHEN NOT NEEDED */
+			}
+
+        }

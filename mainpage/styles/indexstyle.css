@@ -1,0 +1,90 @@
+        header {
+            grid-area: header;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        nav {
+            grid-area: nav;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        main {
+            grid-area: main;
+            border: 1px solid black;
+            padding: 0.5em;       
+        }
+
+        aside {
+            grid-area: aside;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        footer {
+            grid-area: footer;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+                'nav nav footer footer footer footer';
+            grid-gap: .5em;
+			
+			max-width: 1500px; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+
+        
+
+
+        ul li {
+            list-style-type: none;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 800px) {
+            
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 550px) {
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside aside aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+        
