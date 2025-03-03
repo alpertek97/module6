@@ -50,7 +50,7 @@
 
 
         /*FIRST BREAK POINT === tablet */
-        @media only screen and (max-width : 800px) {
+        @media only screen and (max-width : 900px) {
 
             .grid-container {
                 display: grid;
@@ -69,7 +69,7 @@
         }
 
         /*SECOND BREAK POINT === mobile */
-        @media only screen and (max-width : 550px) {
+        @media only screen and (max-width : 600px) {
 
 
             .grid-container {
@@ -87,8 +87,6 @@
                 display: inline-block;
             }
 			
-			img {
-				display: none; /* AND YOU CAN MAKE THINGS DISAPPEAR WHEN NOT NEEDED */
-			}
+			
 
         }
