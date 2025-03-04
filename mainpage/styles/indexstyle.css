@@ -8,6 +8,7 @@
             grid-area: nav;
             border: 1px solid black;
             padding: 0.5em;
+	    margin-bottom: 10px;
         }
 
         main {
